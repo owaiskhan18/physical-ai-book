@@ -24,13 +24,14 @@ function FloatingChatbot() {
     try {
       // Placeholder for actual API call
       // In a real scenario, this would call your backend (e.g., rag-chatbot-backend)
-      const response = await fetch('http://localhost:8000/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ query: input }),
-      });
+      const response = await fetch('https://physical-ai-book-1.onrender.com/api/chat', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ query: input }),
+});
+
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
